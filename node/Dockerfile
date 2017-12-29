@@ -6,6 +6,7 @@ RUN apt-get update \
     && apt-get install -y nodejs \
     && wget https://bootstrap.pypa.io/get-pip.py \
     && python get-pip.py \
-    && pip install awscli --upgrade --user
+    && pip install awscli --upgrade --user \
+    && echo 'export PATH=~/.local/bin:$PATH' >> ~/.bashrc
 
 CMD ["/bin/bash"]
